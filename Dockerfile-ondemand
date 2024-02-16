@@ -3,9 +3,9 @@ FROM ehartford/runpod-worker-vllm:latest
 ARG MODEL_NAME=""
 ENV MODEL_NAME=${MODEL_NAME}
 ENV MODEL_BASE_PATH="/workspace/"
-ENV PORT="8888"
+ENV PORT="8000"
 ENV HOST="0.0.0.0"
-ENV EXTRA_VLLM_ARGS=""
+ENV EXTRA_VLLM_ARGS="--model TheBloke/Venus-120b-v1.1-AWQ --quantization awq --chat-template 'vicuna_v1.1.jinja'"
 
 ENV HF_DATASETS_CACHE="/workspace/huggingface-cache/datasets"
 ENV HUGGINGFACE_HUB_CACHE="/workspace/huggingface-cache/hub"
@@ -14,6 +14,7 @@ ENV HF_HUB_ENABLE_HF_TRANSFER="1"
 ENV HUGGING_FACE_HUB_TOKEN=""
 
 COPY src/entrypoint-ondemand.sh .
+COPY templates/vicuna_v1.1.jinja .
 
 # Start the handler
 ENTRYPOINT [ "/entrypoint-ondemand.sh" ]
