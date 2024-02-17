@@ -2,7 +2,7 @@ import runpy
 from fastchat.model import model_adapter #import VicunaAdapter, register_model_adapter, model_adapters
 
 
-class ChatMLAdapter(model_adapter.VicunaModelAdapter):
+class ChatMLAdapter(model_adapter.VicunaAdapter):
 
     def match(self, model_path: str):
         return 'vicuna' in model_path.lower() or super().match(model_path)
