@@ -1,5 +1,5 @@
 import runpy
-from fastchat.model import model_adapter #import VicunaAdapter, register_model_adapter, model_adapters
+from fastchat.model import model_adapter
 
 
 class ChatMLAdapter(model_adapter.VicunaAdapter):

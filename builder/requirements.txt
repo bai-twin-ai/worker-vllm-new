@@ -7,7 +7,7 @@
 # runpod @ git+https://github.com/runpod/runpod-python@vllm#egg=runpod
 
 # vllm @ git+https://github.com/LiuXiaoxuanPKU/vllm.git@longchat
-vllm==0.2.6
+vllm
 huggingface-hub==0.19.3
 runpod==1.2.1
 fastapi==0.99.1

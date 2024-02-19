@@ -15,7 +15,7 @@ docker push ehartford/runpod-worker-vllm:ondemand
 ### Venus
 
 ```
-docker build -t runpod-worker-vllm:ondemand -f Dockerfile-ondemand-venus .
+docker build -t runpod-worker-vllm:ondemand -f Dockerfile-ondemand .
 docker tag runpod-worker-vllm:ondemand europe-west6-docker.pkg.dev/aitesting-405910/ai-registry/runpod-worker-vllm:ondemand
 docker push europe-west6-docker.pkg.dev/aitesting-405910/ai-registry/runpod-worker-vllm:ondemand
 ```
