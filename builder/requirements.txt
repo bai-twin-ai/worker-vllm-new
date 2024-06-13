@@ -7,11 +7,12 @@
 # runpod @ git+https://github.com/runpod/runpod-python@vllm#egg=runpod
 
 # vllm @ git+https://github.com/LiuXiaoxuanPKU/vllm.git@longchat
+autoawq
 vllm
-huggingface-hub==0.19.3
-runpod==1.2.1
-fastapi==0.99.1
+huggingface-hub
+runpod
+fastapi
 fschat[model_worker]
-hf-transfer~=0.1
+hf-transfer
 transformers @ git+https://github.com/huggingface/transformers.git
 pandas
